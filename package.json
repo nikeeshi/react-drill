@@ -15,7 +15,7 @@
     "styled-components": "^4.2.0",
     "typescript": "3.4.5"
   },
-  "homepage": "https://nikeeshi.github.io/react-drill",
+  "homepage": "https://nikeeshi.github.io/react-drill/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
