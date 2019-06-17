@@ -9,10 +9,15 @@ interface ChildProps {
   base: number;
 }
 const Child = styled.div((props: ChildProps) => `flex:${props.base}`);
-interface ContainerProps {}
-export const Row: React.FunctionComponent<ContainerProps> = ({ children }) => {
+interface ContainerProps {
+  className?: string;
+}
+export const Row: React.FunctionComponent<ContainerProps> = ({
+  children,
+  className
+}) => {
   return (
-    <FlexBoxContainer>
+    <FlexBoxContainer className={className}>
       {React.Children.map(children, child => {
         if (React.isValidElement(child) && child.type === Box) {
           return child;
