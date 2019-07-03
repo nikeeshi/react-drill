@@ -1,21 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "styled-components/macro";
 import styled from "styled-components/macro";
-import { Row } from "../grid/GridBox";
-import { pages } from "../root/pageLoader";
+import { pageConfig } from "../pageConfig";
 const SideNavContainer = styled.div`
   background: darkblue;
   height: 100vh;
 `;
-const NavLink = styled.a`
+const ExternalLink = styled.a`
   padding: 0 10px;
   color: white;
   :hover {
     text-decoration: underline dashed;
   }
 `;
-const ReactRouterLink = styled(Link)`
+const ReactRouterLink = styled(NavLink)`
   padding: 0 10px;
   color: white;
   text-decoration: none;
@@ -26,20 +25,24 @@ const ReactRouterLink = styled(Link)`
 const SideNav: React.FC = () => {
   return (
     <SideNavContainer>
-      <div>
-        <ReactRouterLink to="/">React drill</ReactRouterLink>
-      </div>
-      {pages.map(page => (
-        <div key={page.name}>
-          <ReactRouterLink to={page.path}>{page.name}</ReactRouterLink>
-        </div>
-      ))}
+      {pageConfig.map(
+        page =>
+          page.navigation!=="invisible" && (
+            <div key={page.name}>
+              <ReactRouterLink to={page.path}>{page.name}</ReactRouterLink>
+            </div>
+          )
+      )}
       <br />
       <div>
-        <NavLink href="https://github.com/nikeeshi/react-drill">Github</NavLink>
+        <ExternalLink href="https://github.com/nikeeshi/react-drill">
+          Github
+        </ExternalLink>
       </div>
       <div>
-        <NavLink href="http://nikeeshipro.hatenablog.com/">My blog</NavLink>
+        <ExternalLink href="http://nikeeshipro.hatenablog.com/">
+          My blog
+        </ExternalLink>
       </div>
     </SideNavContainer>
   );
