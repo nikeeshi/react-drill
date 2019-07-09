@@ -10,7 +10,7 @@ const App: React.FC = () => {
       <Row>
         <SideNav />
         <Box base={3}>
-        <FlatRouter pages={pageConfig}/>
+          <FlatRouter pages={pageConfig} />
         </Box>
       </Row>
     </Router>

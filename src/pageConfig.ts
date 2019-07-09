@@ -17,8 +17,8 @@ export const pageConfig: Page[] = [
   },
   {
     component: PushMan,
-    path: "/pushman/",
-    name: "PushMan"
+    path: "/gamepad/",
+    name: "Gamepad ditector"
   },
   {
     component: RandomPicker,
