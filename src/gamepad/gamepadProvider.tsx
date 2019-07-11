@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { ReactNode } from "react";
+import React, { useEffect, useState, ReactNode } from "react";
+import { useTick } from "../hooks/useTick";
 const getGamepad = (): Gamepad | null => {
   const gamepads = [...navigator.getGamepads()];
   const oneGamepad = gamepads.find(
@@ -11,8 +11,8 @@ export const GamepadProvider: React.FC<{
   children: (gamepad: Gamepad | null) => ReactNode;
 }> = ({ children }) => {
   const [gamepad, setGamepad] = useState<Gamepad | null>(null);
-  useEffect(() => {
-    setInterval(() => setGamepad(getGamepad()));
-  }, []);
+  useTick(() => {
+    setGamepad(getGamepad());
+  });
   return <>{children(gamepad)}</>;
 };

@@ -1,7 +1,7 @@
 import * as React from "react";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { GamepadProvider } from "../gamepad/gamepad";
+import { GamepadProvider } from "../gamepad/gamepadProvider";
 const Block: React.FC<{ x: number; y: number }> = ({ x, y }) => {
   return (
     <div
