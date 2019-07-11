@@ -1,5 +1,5 @@
 {
-  "name": "react-drill",
+  "name": "react-my-drill",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -48,7 +48,7 @@
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
     "postcss-normalize": "7.0.1",
-    "postcss-preset-env": "6.6.0",
+    "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.0",
@@ -66,7 +66,7 @@
     "webpack": "4.29.6",
     "webpack-dev-server": "3.2.1",
     "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "4.2.0"
+    "workbox-webpack-plugin": "4.3.1"
   },
   "homepage": "https://nikeeshi.github.io/react-drill/",
   "scripts": {
