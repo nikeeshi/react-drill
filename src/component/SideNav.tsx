@@ -4,7 +4,7 @@ import "styled-components/macro";
 import styled from "styled-components/macro";
 import { pageConfig } from "../pageConfig";
 const SideNavContainer = styled.div`
-  background: darkblue;
+  background: darkred;
   height: 100vh;
 `;
 const ExternalLink = styled.a`
